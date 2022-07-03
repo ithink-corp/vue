@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <article
-    class="text-sm bg-stone-800 text-stone-50 border-stone-50/10 border-[1px] px-2 py-1 rounded"
+    class="rounded border-[1px] border-stone-50/10 bg-stone-800 px-2 py-1 text-sm text-stone-50"
   >
     {{ message }}
   </article>

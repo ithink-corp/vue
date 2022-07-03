@@ -14,10 +14,10 @@ const thoughtList = ref(null);
 </script>
 
 <template>
-  <header class="bg-stone-800 py-1 px-3 flex items-center justify-between">
-    <h1 class="text-stone-50 font-bold text-lg">ithink</h1>
+  <header class="flex items-center justify-between bg-stone-800 py-1 px-3">
+    <h1 class="text-lg font-bold text-stone-50">ithink</h1>
     <button
-      class="button px-2 py-.5 bg-orange-500 rounded text-stone-50 font-bold"
+      class="button py-.5 rounded bg-orange-500 px-2 font-bold text-stone-50"
       @click="openDialog"
       :disabled="!(thoughtList && thoughtList.isLoaded)"
     >
@@ -25,7 +25,7 @@ const thoughtList = ref(null);
     </button>
   </header>
 
-  <main class="mt-4 mx-2 mb-8">
+  <main class="mx-2 mt-4 mb-8">
     <ThoughtList ref="thoughtList" />
   </main>
 

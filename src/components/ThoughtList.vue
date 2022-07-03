@@ -46,7 +46,7 @@ defineExpose({
 <template>
   <div class="flex flex-wrap gap-2" v-if="isLoaded">
     <ThoughtItem
-      class="w-48 min-h-[4rem]"
+      class="min-h-[4rem] w-48"
       v-for="message in items"
       :message="message"
       :key="message"

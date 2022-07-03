@@ -12,13 +12,13 @@ const { message, actionMessage, actionMethod } = storeToRefs(
     <dialog
       v-if="message"
       open
-      class="fixed isolate bottom-0 transform -translate-x-1/2 left-1/2 text-sm m-0 mb-4 min-w-[70%] max-w-[90%] truncate sm:left-0 sm:translate-x-0 sm:ml-4 sm:min-w-0 sm:w-72 py-2 px-4 bg-stone-50/10 backdrop-blur-lg text-stone-50 flex justify-between items-center rounded shadow-md shadow-stone-800"
+      class="fixed bottom-0 left-1/2 isolate m-0 mb-4 flex min-w-[70%] max-w-[90%] -translate-x-1/2 transform items-center justify-between truncate rounded bg-stone-50/10 py-2 px-4 text-sm text-stone-50 shadow-md shadow-stone-800 backdrop-blur-lg sm:left-0 sm:ml-4 sm:w-72 sm:min-w-0 sm:translate-x-0"
     >
       <main>{{ message }}</main>
       <footer v-if="actionMessage && actionMethod">
         <button
           @click="actionMethod"
-          class="text-stone-50 bg-stone-700 px-2 py-1 rounded-sm hover:filer hover:brightness-110 active:brightness-90"
+          class="hover:filer rounded-sm bg-stone-700 px-2 py-1 text-stone-50 hover:brightness-110 active:brightness-90"
         >
           {{ actionMessage }}
         </button>
@@ -37,6 +37,6 @@ const { message, actionMessage, actionMethod } = storeToRefs(
 
 .slide-up-enter-from,
 .slide-up-leave-to {
-  @apply transform translate-y-full opacity-0;
+  @apply translate-y-full transform opacity-0;
 }
 </style>

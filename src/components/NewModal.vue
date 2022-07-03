@@ -77,7 +77,7 @@ defineExpose({
   >
     <dialog
       open
-      class="bg-stone-800 rounded-lg py-4 px-3 w-[75%] sm:w-96"
+      class="w-[75%] rounded-lg bg-stone-800 py-4 px-3 sm:w-96"
       ref="dialog"
     >
       <main>
@@ -87,20 +87,20 @@ defineExpose({
             id="content"
             ref="textarea"
             v-model="thought"
-            class="block w-full text-xs bg-transparent text-stone-50 border-[1px] border-stone-700 rounded focus:border-orange-500 focus:shadow-none resize-none caret-orange-500 text-sm h-32"
+            class="block h-32 w-full resize-none rounded border-[1px] border-stone-700 bg-transparent text-xs text-sm text-stone-50 caret-orange-500 focus:border-orange-500 focus:shadow-none"
           ></textarea>
 
-          <div class="flex items-center justify-end gap-2 mt-2">
+          <div class="mt-2 flex items-center justify-end gap-2">
             <button
               @click.prevent="close"
               value="cancel"
-              class="button px-2 py-.5 text-stone-50 text-sm font-bold bg-stone-400 rounded"
+              class="button py-.5 rounded bg-stone-400 px-2 text-sm font-bold text-stone-50"
             >
               Cancel
             </button>
             <button
               value="default"
-              class="button px-2 py-.5 text-stone-50 text-sm font-bold bg-orange-500 rounded"
+              class="button py-.5 rounded bg-orange-500 px-2 text-sm font-bold text-stone-50"
             >
               Post
             </button>
