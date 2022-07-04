@@ -1,25 +1,19 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref, onMounted } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import getSnackbarStore from "@/stores/snackbar";
 import getThoughtsStore from "@/stores/thoughts";
 
-const isOpen = ref(false);
-function open() {
-  isOpen.value = true;
-}
+const emit = defineEmits(['close'])
 function close() {
-  isOpen.value = false;
+  emit('close')
 }
 
+// AUTOMATICALLY FOCUS TEXTAREA
 const textarea = ref(null);
-watch(
-  textarea,
-  (target) => {
-    if (target) target.focus();
-  },
-  { immediate: true }
-);
+onMounted(() => {
+  textarea.value.focus()
+})
 
 const dialog = ref(null);
 const isLoading = ref(false);
@@ -72,7 +66,6 @@ defineExpose({
 
 <template>
   <div
-    v-if="isOpen"
     class="fixed inset-0 grid place-items-center backdrop-brightness-50"
   >
     <dialog
