@@ -32,7 +32,6 @@ const { add: addItem } = getThoughtsStore();
 async function submit() {
   // prepare loading
   isLoading.value = true;
-  dialog.value.setAttribute("inert", true);
 
   try {
     // send data to server
@@ -54,7 +53,6 @@ async function submit() {
   }
 
   close();
-  dialog.value.removeAttribute("inert");
   isLoading.value = false;
 }
 
@@ -68,6 +66,7 @@ defineExpose({
   <div class="fixed inset-0 grid place-items-center backdrop-brightness-50">
     <dialog
       open
+      :inert="isLoading"
       class="w-[75%] rounded-lg bg-stone-800 py-4 px-3 sm:w-96"
       ref="dialog"
     >
