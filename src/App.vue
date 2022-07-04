@@ -5,12 +5,12 @@ import SnackBar from "@/components/SnackBar.vue";
 import ThoughtList from "@/components/ThoughtList.vue";
 
 // NEW MODAL
-const isNewModalOpen = ref(false)
+const isNewModalOpen = ref(false);
 function openDialog() {
-  isNewModalOpen.value = true
+  isNewModalOpen.value = true;
 }
 function close() {
-  isNewModalOpen.value = false
+  isNewModalOpen.value = false;
 }
 
 const thoughtList = ref(null);

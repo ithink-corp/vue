@@ -4,16 +4,16 @@ import { onClickOutside } from "@vueuse/core";
 import getSnackbarStore from "@/stores/snackbar";
 import getThoughtsStore from "@/stores/thoughts";
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(["close"]);
 function close() {
-  emit('close')
+  emit("close");
 }
 
 // AUTOMATICALLY FOCUS TEXTAREA
 const textarea = ref(null);
 onMounted(() => {
-  textarea.value.focus()
-})
+  textarea.value.focus();
+});
 
 const dialog = ref(null);
 const isLoading = ref(false);
@@ -65,9 +65,7 @@ defineExpose({
 </script>
 
 <template>
-  <div
-    class="fixed inset-0 grid place-items-center backdrop-brightness-50"
-  >
+  <div class="fixed inset-0 grid place-items-center backdrop-brightness-50">
     <dialog
       open
       class="w-[75%] rounded-lg bg-stone-800 py-4 px-3 sm:w-96"

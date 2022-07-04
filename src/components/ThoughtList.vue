@@ -45,14 +45,8 @@ defineExpose({
 
 <template>
   <ul class="flex flex-wrap gap-2" v-if="isLoaded">
-    <li
-      class="min-h-[4rem] w-48"
-      v-for="message in items"
-      :key="message"
-    >
-      <ThoughtItem
-      :message="message"
-      />
+    <li class="min-h-[4rem] w-48" v-for="message in items" :key="message">
+      <ThoughtItem :message="message" />
     </li>
   </ul>
   <div class="flex flex-wrap gap-2" v-else>
