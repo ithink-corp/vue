@@ -5,9 +5,9 @@ defineProps({
 </script>
 
 <template>
-  <article
+  <p
     class="rounded border-[1px] border-stone-50/10 bg-stone-800 px-2 py-1 text-sm text-stone-50"
   >
     {{ message }}
-  </article>
+  </p>
 </template>
