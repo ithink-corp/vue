@@ -5,12 +5,12 @@ import SnackBar from "@/components/SnackBar.vue";
 import ThoughtList from "@/components/ThoughtList.vue";
 
 // NEW MODAL
-const isOpen = ref(false)
+const isNewModalOpen = ref(false)
 function openDialog() {
-  isOpen.value = true
+  isNewModalOpen.value = true
 }
 function close() {
-  isOpen.value = false
+  isNewModalOpen.value = false
 }
 
 const thoughtList = ref(null);
@@ -33,7 +33,7 @@ const thoughtList = ref(null);
   </main>
 
   <Teleport to="body">
-    <NewModal v-if="isOpen" @close="close" />
+    <NewModal v-if="isNewModalOpen" @close="close" />
     <SnackBar />
   </Teleport>
 </template>
